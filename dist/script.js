@@ -55,3 +55,9 @@ motionPreference.addEventListener('change',syncMotion);document.addEventListener
 document.querySelectorAll('.faq-list details').forEach(details=>details.addEventListener('toggle',()=>{
  if(details.open&&!motionPreference.matches&&typeof details.querySelector('p')?.animate==='function')details.querySelector('p').animate([{opacity:0,transform:'translateY(-5px)'},{opacity:1,transform:'translateY(0)'}],{duration:260,easing:'ease-out'});
 }));
+
+if(typeof entranceObserver!=='undefined'&&entranceObserver)document.querySelectorAll('.original-timeline li,.audience-grid article,.hero-pillars>div').forEach(e=>entranceObserver.observe(e));
+
+if(location.protocol==='file:'){const geoShortcut=document.querySelector('.geo-shortcut');if(geoShortcut)geoShortcut.href='file:///D:/WINNOE/HTML/HYZK-GEO/index.html';}
+
+if(typeof entranceObserver!=='undefined'&&entranceObserver)document.querySelectorAll('.quick-start,.reference-tier,.openclaw-note,.reference-audience article,.reference-industries article,.reference-outcomes,.reference-about>div,.reference-wechat').forEach(e=>entranceObserver.observe(e));
