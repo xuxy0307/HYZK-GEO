@@ -45,3 +45,9 @@
 html[data-page-paused] *,html[data-page-paused] *::before,html[data-page-paused] *::after{animation-play-state:paused!important}
 @media(max-width:760px){.version-new{padding:6px 11px;min-height:30px;font-size:12px}.badge{font-size:12px}.hero::before{height:450px}.agent-hub{animation:none!important}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.hero::before,.button.primary::after{display:none}}
+
+/* GEO header: centered section links without the business switch. */
+.geo-site .nav-links{display:flex;align-items:center;justify-content:center;gap:24px;min-width:0}.geo-site .nav-links>a{position:relative;display:flex;align-items:center;min-height:44px;font-size:14px;white-space:nowrap}.geo-site .nav-links>a::after{content:'';position:absolute;left:0;right:0;bottom:3px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--motion-ease)}.geo-site .nav-links>a:hover::after,.geo-site .nav-links>a:focus-visible::after{transform:scaleX(1)}
+@media(min-width:1081px){.geo-site .nav-wrap{display:grid;grid-template-columns:1fr auto 1fr}.geo-site .navigation{display:contents}.geo-site .brand{justify-self:start}.geo-site .nav-links{grid-column:2}.geo-site .nav-cta{grid-column:3;justify-self:end}}
+@media(min-width:761px) and (max-width:1080px){.geo-site .nav-wrap{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px}.geo-site .navigation{display:contents}.geo-site .nav-links{gap:14px;flex-wrap:wrap}.geo-site .nav-links>a{font-size:13px}.geo-site .nav-cta{justify-self:end}}
+@media(max-width:760px){.geo-site .navigation{grid-row:2;justify-content:center}.geo-site .nav-links{width:100%;gap:8px 20px;flex-wrap:wrap}.geo-site .nav-links>a{font-size:14px}.geo-site .navigation>.nav-cta{margin-top:4px}.geo-site .nav-wrap{min-height:76px}}
