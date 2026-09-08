@@ -1,0 +1,1 @@
+{"name":"hyzk-geo","version":"1.0.0","private":true,"description":"华阳智瞰 GEO 2.0 进阶版陪跑网站","type":"module","scripts":{"dev":"node scripts/serve.mjs","build":"node scripts/build.mjs","check":"node scripts/check.mjs"},"engines":{"node":">=20"}}
