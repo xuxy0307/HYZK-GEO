@@ -78,7 +78,7 @@ if(demo){
   if(typing.textContent!==text)typing.textContent=text;
   setData('runStep',ms<8700?1:ms<10100?2:3);
   demo.style.setProperty('--run-progress',Math.max(0,Math.min(100,(ms-7400)/40))+'%');
-  run.disabled=ms<6200||stage==='running';run.textContent=stage==='running'?'运行中':'运行';
+  run.disabled=ms<6200||stage==='running';run.querySelector('.run-label').textContent=stage==='running'?'运行中':'运行';
  }
  function tick(now){if(last)elapsed=(elapsed+now-last)%15500;last=now;renderDemo(elapsed);frame=requestAnimationFrame(tick);}
  function updateDemo(){
