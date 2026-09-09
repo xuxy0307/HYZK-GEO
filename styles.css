@@ -114,3 +114,8 @@ html[data-page-paused] *,html[data-page-paused] *::before,html[data-page-paused]
 .fact-demo .fact-run-row{grid-column:2;grid-row:3;align-self:center;margin-top:0}
 .fact-demo .run-pointer{right:28px;bottom:25px}
 @media(max-width:420px){.fact-demo .fact-composer{column-gap:8px}.fact-demo .fact-run-row button{padding:7px 12px}.fact-demo .run-pointer{right:23px;bottom:22px}}
+
+/* SVG tip (3,2) in a 24x28 viewBox lands at the button center. */
+.fact-demo #demo-run{position:relative}
+.fact-demo .fact-option-selected .select-pointer,.fact-demo #demo-run .run-pointer{display:block;position:absolute;width:22px;height:25.666667px;left:calc(50% - 2.75px);top:calc(50% - 1.833333px);right:auto;bottom:auto;pointer-events:none}
+.fact-demo .select-pointer svg,.fact-demo .run-pointer svg{display:block;width:100%;height:100%}
