@@ -12,7 +12,7 @@ assert(new Set(ids).size===ids.length,'Duplicate HTML IDs');
 assert((html.match(/<h1[ >]/g)||[]).length===1,'Expected one H1');
 for(const [,url] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
  if(url.startsWith('#')) assert(ids.includes(url.slice(1)),`Missing anchor ${url}`);
- else if(url.startsWith('./')) await access(path.join(root,url));
+ else if(url.startsWith('./')) await access(path.join(root,url.split(/[?#]/)[0]));
  else assert(/^(https:|mailto:)/.test(url),`Unexpected resource ${url}`);
 }
 assert(!/innerHTML|document.write/.test(js),'Unexpected HTML string injection');
